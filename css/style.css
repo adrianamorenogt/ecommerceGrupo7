@@ -64,6 +64,12 @@ body {
 	font-weight: 500;
 }
 
+.navbar-nav a:hover {
+	background-color: rgb(240, 206, 206);
+	border-radius: 25px;
+	color: #fff;
+}
+
 .navbar-light .navbar-brand {
 	color: #000;
 	font-size: 25px;
