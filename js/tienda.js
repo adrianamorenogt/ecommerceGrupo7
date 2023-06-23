@@ -1,33 +1,57 @@
+
 const baseDeDatos = [
     {
         id: 1,
         nombre: 'ALICATES Y PINZAS',
-        precio: 69.300,
+        precio: 69.303,
         imagen: 'https://belltec.com.co/c/11-category_default/alicates-y-pinzas.jpg'
     },
     {
         id: 2,
-        nombre: 'BOTADORES',
-        precio: 1.2,
-        imagen: 'cebolla.jpg'
+        nombre: 'CAJAS Y SOPORTES P/HERRAMIENTAS',
+        precio: 94.505,
+        imagen: 'https://belltec.com.co/c/30-category_default/cajas-y-soportes-p-herramientas.jpg'
     },
     {
         id: 3,
-        nombre: 'Calabacin',
-        precio: 2.1,
-        imagen: 'calabacin.jpg'
+        nombre: 'EXTRACTORES',
+        precio: 114.005,
+        imagen: 'https://belltec.com.co/c/59-category_default/extractores.jpg'
     },
     {
         id: 4,
-        nombre: 'Fresas',
-        precio: 0.6,
-        imagen: 'fresas.jpg'
+        nombre: 'PRENSA PLANA PARA TALADRO DE BANCO NO.3 - 75 MM',
+        precio: 74.599,
+        imagen: 'https://belltec.com.co/7935-home_default/prensa-plana-para-taladro-de-banco-no3-75-mm.jpg'
+    },  {
+        id: 5,
+        nombre: 'ENGRAPADORA/CLAVADORA ELECTRICA STANLEY 120 VOL.',
+        precio: 289.909,
+        imagen: 'https://belltec.com.co/9154-home_default/engrapadoraclavadora-electrica-stanley-120-vol-tre550-.jpg://belltec.com.co/c/11-category_default/alicates-y-pinzas.jpg'
+    },
+    {
+        id: 6,
+        nombre: 'JUEGO DESTORNILLADOR X 39 PZS. PRETUL JUDA-39P',
+        precio: 47.599,
+        imagen: 'https://belltec.com.co/11179-home_default/juego-x-39-pzs-pretul-juda-39p.jpghttps://belltec.com.co/c/30-category_default/cajas-y-soportes-p-herramientas.jpg'
+    },
+    {
+        id: 7,
+        nombre: 'ARRANCADOR DE BATERIAS 7AH PLOMO ACIDO HYUNDAI HYJS750',
+        precio: 529.999,
+        imagen: 'https://belltec.com.co/c/59-category_dhttps://belltec.com.co/11217-home_default/juego-destornilladores-joyero-x-43pzs-truper-joy-43.jpgefault/extractores.jpg'
+    },
+    {
+        id: 8,
+        nombre: 'PRENSA PLANA PARA TALADRO DE BANCO NO.3 - 75 MM',
+        precio: 74.599,
+        imagen: 'https://belltec.com.co/7935-home_default/https://belltec.com.co/7989-home_default/arrancador-de-baterias-7ah-plomo-acido-hyundai-hyjs750.jpgprensa-plana-para-taladro-de-banco-no3-75-mm.jpg'
     }
 
 ];
 
 let carrito = [];
-const divisa = '€';
+const valor = '$';
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
@@ -57,7 +81,7 @@ function renderizarProductos() {
         // Precio
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
-        miNodoPrecio.textContent = `${info.precio}${divisa}`;
+        miNodoPrecio.textContent = `${info.precio}${valor}`;
         // Boton 
         const miNodoBoton = document.createElement('button');
         miNodoBoton.classList.add('btn', 'btn-primary');
@@ -84,7 +108,6 @@ function anyadirProductoAlCarrito(evento) {
     renderizarCarrito();
 
 }
-
 /**
  * Dibuja todos los productos guardados en el carrito
  */
@@ -108,7 +131,7 @@ function renderizarCarrito() {
         // Creamos el nodo del item del carrito
         const miNodo = document.createElement('li');
         miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${valor}`;
         // Boton de borrar
         const miBoton = document.createElement('button');
         miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -169,4 +192,5 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 // Inicio
 renderizarProductos();
 renderizarCarrito();
+
 
