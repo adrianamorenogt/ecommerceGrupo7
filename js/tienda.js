@@ -1,4 +1,4 @@
-
+// BASE DE DATOS
 const baseDeDatos = [
     {
         id: 1,
@@ -23,7 +23,7 @@ const baseDeDatos = [
         nombre: 'PRENSA PLANA PARA TALADRO DE BANCO NO.3 - 75 MM',
         precio: 74.599,
         imagen: 'https://belltec.com.co/7935-home_default/prensa-plana-para-taladro-de-banco-no3-75-mm.jpg'
-    },  {
+    }, {
         id: 5,
         nombre: 'ENGRAPADORA/CLAVADORA ELECTRICA STANLEY 120 VOL.',
         precio: 289.909,
@@ -37,17 +37,22 @@ const baseDeDatos = [
     },
     {
         id: 7,
-        nombre: 'ARRANCADOR DE BATERIAS 7AH PLOMO ACIDO HYUNDAI HYJS750',
+        nombre: 'SOPORTE BASE ROTATIVA RM3+CONTROL RM3+RC2 BOSCH',
         precio: 529.999,
-        imagen: 'https://belltec.com.co/c/59-category_dhttps://belltec.com.co/11217-home_default/juego-destornilladores-joyero-x-43pzs-truper-joy-43.jpgefault/extractores.jpg'
+        imagen: 'https://belltec.com.co/7952-large_default/soporte-base-rotativa-rm3control-rm3rc2-bosch.jpg'
     },
     {
         id: 8,
         nombre: 'PRENSA PLANA PARA TALADRO DE BANCO NO.3 - 75 MM',
         precio: 74.599,
-        imagen: 'https://belltec.com.co/7935-home_default/https://belltec.com.co/7989-home_default/arrancador-de-baterias-7ah-plomo-acido-hyundai-hyjs750.jpgprensa-plana-para-taladro-de-banco-no3-75-mm.jpg'
-    }
-
+        imagen: 'https://belltec.com.co/7935-home_default/prensa-plana-para-taladro-de-banco-no3-75-mm.jpg'
+    },
+    {
+        id: 9,
+        nombre: 'NIVELADOR LASER 300M BOSCH GRL 300HV',
+        precio: 3.961599,
+        imagen: 'https://belltec.com.co/16870-home_default/nivelador-laser-300m-bosch-grl-300hv.jpg'
+    },
 ];
 
 let carrito = [];
@@ -173,7 +178,7 @@ function calcularTotal() {
         });
         // Los sumamos al total
         return total + miItem[0].precio;
-    }, 0).toFixed(2);
+    }, 0).toFixed(3);
 }
 
 /**
